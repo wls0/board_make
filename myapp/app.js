@@ -3,7 +3,6 @@ let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
-let session= require('express-session');
 let indexRouter = require('./routes/index');
 
 const methodOverride = require('method-override');

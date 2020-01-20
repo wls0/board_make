@@ -2,32 +2,6 @@ let express = require('express');
 let router = express.Router();
 let models = require('../models');
 let moment = require('moment');
-<<<<<<< HEAD
-const request = require('request');
-const cheerio = require('cheerio');
-const iconv = require('iconv-lite');
-
-
-// router.get("/craw",function(req,res,next){
-//   let url = "https://m.datalab.naver.com/realtimeList.naver";
-//   let craw =[];
-//   request({url, encoding:null}, function(err, response, body){
-//     let html_result=iconv.decode(body,'UTF-8');
-//     const $ = cheerio.load(html_result);
-//     let colArr = $(".item_title");
-//     console.log(colArr);
-//     for(let i =0; i< colArr.length;i++){      
-//       craw.push(colArr[i])
-//     }
-//     res.render("craw",{
-//       craws:craw
-//     });
-//   })
-// });
-
-
-=======
->>>>>>> 43d0770a6c3a264a198c02a0aa20fd2fe870fc7b
 
 //글 목록 페이지
 router.get('/', function(req, res, next) {
