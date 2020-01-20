@@ -1,0 +1,32 @@
+<% include ./index/top.ejs%>
+<section class="section1">
+    <h2>게시글을 수정해주세요</h2>
+    <form action="/update/<%=post.id%>?_method=PUT" method="post" name="edit_frm">
+        <div class="create">
+            <p><input type="text" name="edit_title" id="edit_title" class="create_title" value="<%=post.title%>"></p>
+            <p><input type="text" name="edit_writer" id="edit_writer" class="create_user" value="<%=post.writer%>"></p>
+            <p><textarea cols="100" name="edit_description" id="edit_description" class="content" ><%=post.description%></textarea></p>
+            <p><input type="password" name="edit_pwd" id="edit_pwd" placeholder="비밀번호를 입력하세요."></p>
+            <input type="hidden" name="edit_hidden" id="edit_hidden" value="<%=post.pwd%>">
+            </div>   
+            <button type="button" class="btn btn-primary" onclick="update()">글 수정</button>
+            <button type="button" onclick="location.href='/' " class="btn btn-danger">돌아가기</button>
+        </form>
+    </div>
+</section>
+<script type="text/JavaScript">
+    let update = function(){
+        if(!edit_pwd.value){
+            alert('글 비밀번호를 입력해주세요');
+            edit_pwd.focus();
+            return;
+        }
+        if(document.getElementById('edit_pwd').value !== document.getElementById('edit_hidden').value){
+            alert('비밀번호가 틀립니다.');
+            edit_pwd.focus();
+            return;
+        }
+        edit_frm.submit();
+    }
+</script>
+<% include ./index/footer.ejs%>

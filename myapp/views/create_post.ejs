@@ -1,0 +1,43 @@
+<% include ./index/top.ejs%>
+<section class="section1">
+    <h2>게시글을 작성해주세요</h2>
+    <form action="/create_post" method="POST" name="frm_create">
+        <div class="create">
+        <p><input type="text" name="title" id="title_create" class="create_title" placeholder="제목을 입력해주세요."></p>
+        <p><input type="text" name="username" id="username_create" class="create_user"placeholder="작성자를 입력해주세요."></p>
+        <p><input type="password" name="pwd" id="pwd_create" class="create_pwd"placeholder="글의 비밀번호를 입력해주세요."></p>
+        <p><textarea cols="100" name="description" id="description_create" class="content" placeholder="내용를 입력해주세요."></textarea></p>
+        </div>
+        <div class="post_button">
+        <button type="button" class="btn btn-primary" onclick="post_create_input()">글쓰기</button>
+        <button type="button" onclick="location.href='/' " class="btn btn-danger">돌아가기</button>
+        </div>  
+    </form>
+</section>
+<script type="text/JavaScript">
+    let post_create_input = function(){
+        if(!title_create.value){
+            alert('제목을 입력해주세요.');
+            title_create.focus();
+            return;
+        }
+        if(!username_create.value){
+            alert('작성자를 입력해주세요');
+            frm_create.username.focus();
+            return;
+        }
+        if(!pwd_create.value){
+            alert('비밀번호를 입력해주세요');
+            frm_create.pwd.focus();
+            return;
+        }
+        if(!description_create.value){
+            alert('내용를 입력해주세요');
+            frm_create.description.focus();
+            return;
+        }
+        console.log("걸렸습니다");
+        frm_create.submit();
+    }
+</script>
+<% include ./index/footer.ejs%>

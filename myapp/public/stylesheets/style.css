@@ -1,0 +1,100 @@
+#header .layout a img{
+  display: inline-block;
+  height: 40px;
+  margin-top: 6px;
+}
+#header .navbar-expand-sm {
+  display: inline-block;
+  float: right;
+}
+#header .layout {
+  width: 1140px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#header .layout ul li button{
+  font-weight: bold;
+}
+.section1 {
+  width: 1140px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.section1 .big-title{
+  border-bottom-style: solid;
+}
+.section1 .big-title h2{
+  font-weight: bold;
+}
+.section1 .post-header{
+  border-bottom: 1px black solid;
+}
+.section1 .post-title{
+  display: inline-block;
+}
+.section1 .post-info{
+  display: inline-block;
+  float: right;
+  padding-top: 8px;
+}
+.section1 .post-content{
+  border-bottom: 1px black solid;
+}
+.section1 .create .create_title{
+  width: 100%;
+}
+.section1 .create .create_user{
+  width: 100%;
+}
+.section1 .create .create_pwd{
+  width: 100%;
+}
+.section1 .create .content{
+  height: 200px;
+  width: 100%;
+  height: 400px;
+  resize: none;
+}
+.section1 .post_button{
+  padding-top: 40px;
+  padding-left: 470px;
+}
+
+.section1 .post-wrap .post_button .post_button_update{
+  display: inline-block;
+}
+.section1 .post-wrap .post_button .post_button_delete{
+  display: inline-block;
+}
+.section1 .post-wrap .post_button .post_button_delete #post_delete_pwd{
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+}
+.section1 .create #edit_pwd{
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+}
+.section1 .container .non_text{
+  text-align: center;
+}
+#footer{
+  background-color: #d3d3d361;
+  height: 280px;
+} 
+#footer .content p{
+  font-size: 12px;
+  text-align: center;
+  padding-top: 40px;
+}
+#footer .content #footerContent{
+  font-size: 10px;
+  font-weight: bold;
+}
+#footer .content #copyright{
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 50px;
+}

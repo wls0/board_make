@@ -1,0 +1,28 @@
+<% include ./index/top.ejs%>
+<section class="section1">
+  <div class="container">           
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>글 목록</th>
+          <th>작성자</th>
+          <th>작성일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%if(posts[0] === undefined){%>
+          <td colspan="3" class="non_text">데이터가 없습니다.</td>
+        <%}else if(!posts.id){%>
+        <% for(let i=0; i<posts.length; i++) { %>
+        <tr>
+          <td><a href="/post/<%=posts[i].post_data.id%>"><%= posts[i].post_data.title %></a></td>
+          <td><%= posts[i].post_data.writer %></td>
+          <td><%=posts[i].date%></td>
+          <%}%>
+          <%}%>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<% include ./index/footer.ejs%>

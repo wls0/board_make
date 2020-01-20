@@ -1,0 +1,51 @@
+<% include ./index/top.ejs%>
+<section class="section1">
+    <div class="big-title">
+        <h2>익명 게시판</h2>
+    </div>
+    <div class="post-wrap">
+        <div class="post-header">
+            <div class="post-title">
+            <% for(let i=0; i<posts.length; i++) {%>
+                <h3><%=posts[i].post_data.title%></h3>
+                <%let pwd = posts[i].post_data.pwd%>
+            </div>
+            <div class="post-info">
+                <span class="writer">글쓴이: <%=posts[i].post_data.writer%></span>
+                <span class="date">날짜: <%=posts[i].date%></span>
+            </div>
+        </div>
+        <div class="post-content">
+            <p><%=posts[i].post_data.description%></p>
+        </div>
+        <div class="post_button">
+        <div class="post_button_update">
+            <button type="button" onclick="location.href='/update/<%=posts[i].post_data.id%>' " class="btn btn-primary">글 수정</button>
+        </div>
+        <div class="post_button_delete">
+            <form action="/delete/<%=posts[i].post_data.id%>?_method=DELETE" method="post" name="frm">
+            <button type="button" class="btn btn-danger" onClick="post_delete_input()" name="delete">삭제하기</button>
+            <input type="password" name="post_delete" placeholder="비밀번호를 입력하세요." id="post_delete_pwd">
+            <input type="hidden" name="post_delete_hidden" id="post_delete_hidden" value="<%=pwd%>">
+        </form>
+        </div>
+        </div>
+        <%}%>
+    </div>
+</section>
+<script type="text/JavaScript">
+    let post_delete_input = function(){
+        if(!document.getElementById('post_delete_pwd').value){
+            alert('글 비밀번호를 입력해주세요');
+            frm.post_delete.focus();
+            return;
+        }
+        if(document.getElementById('post_delete_pwd').value !== document.getElementById('post_delete_hidden').value){
+            alert('비밀번호가 틀립니다.');
+            frm.post_delete.focus();
+            return;
+        }
+        frm.submit();
+    }
+</script>
+<% include ./index/footer.ejs%>
