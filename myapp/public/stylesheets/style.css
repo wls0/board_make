@@ -19,6 +19,7 @@
   width: 1140px;
   margin: 0 auto;
   overflow: hidden;
+  margin-top: 20px;
 }
 .section1 .big-title{
   border-bottom-style: solid;
@@ -33,9 +34,10 @@
   display: inline-block;
 }
 .section1 .post-info{
-  display: inline-block;
+  display: block;
+  font-size: 10px;
+  padding-top: 26px;
   float: right;
-  padding-top: 8px;
 }
 .section1 .post-content{
   border-bottom: 1px black solid;
@@ -55,6 +57,7 @@
   height: 400px;
   resize: none;
 }
+
 .section1 .post_button{
   padding-top: 40px;
   padding-left: 470px;
@@ -71,7 +74,7 @@
   width: 200px;
   text-align: center;
 }
-.section1 .create #edit_pwd{
+.section1 #edit_pwd{
   border-radius: 10px;
   width: 200px;
   text-align: center;
@@ -97,4 +100,98 @@
   font-weight: bold;
   text-align: center;
   padding-top: 50px;
+}
+@media screen and (max-width: 1140px){
+  #header .layout a img{
+    display: inline-block;
+    height: 40px;
+    margin-top: 6px;
+  }
+  #header .layout {
+    width: 570px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .section1 {
+    width: 570px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  .section1 .post_button {
+    padding-top: 20px;
+    padding-left: 192px;
+  }
+}
+
+@media screen and (max-width: 570px){
+  button{
+    width: 100%;
+  }
+  #header .layout a img{
+    display: inline-block;
+    height: 40px;
+    margin-top: 6px;
+  }
+  #header .layout {
+    width: 285px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  #header .layout ul li #home_create{
+    margin-right: -20px;
+    width: 74px;
+  }
+  .section1 {
+    width: 285px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  .container {
+    width: 290px;
+    padding-right: 0px;
+    padding-left: 0px;
+    font-size: 10px;
+  }
+  .container thead tr :nth-child(2){
+    display: none;
+  }
+  .container tbody tr :nth-child(2){
+    display: none;
+  }
+  .section1 .post_button {
+    padding-top: 20px;
+    padding-left: 0;
+  }
+  .section1 #post_create_title{
+    font-size: 27px;
+    font-weight: bold;
+  }
+  .section1 .post-wrap .post_button .post_button_update {
+    display: inline-block;
+    width: 100%;
+  }
+  .section1 #edit_pwd {
+    border-radius: 10px;
+    width: 285px;
+    text-align: center;
+  }
+  .section1 .post-wrap .post_button .post_button_delete #post_delete_pwd {
+    border-radius: 10px;
+    width: 285px;
+    text-align: center;
+  }
+  #footer .content #footerContent{
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .section1 .post-info {
+    display: block;
+    font-size: 14px;
+    padding-top: 0px;
+    float: right;
+    border-bottom: 1px black solid;
+    width: 285px;
+    text-align: left;
+  }
 }
