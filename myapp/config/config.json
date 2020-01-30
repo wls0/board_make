@@ -5,6 +5,7 @@
     "database": "develop",
     "host": "localhost",
     "dialect": "mysql",
+    "timezone": "+09:00",
     "operatorsAliases": false
   },
   "test": {
